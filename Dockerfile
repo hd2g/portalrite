@@ -1,5 +1,8 @@
 FROM ruby:3.1
 
+RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && apt-get update -qq && apt-get install -y nodejs
+RUN npm install -g yarn
+
 ENV ROOT="/portalrite"
 
 RUN mkdir ${ROOT}
